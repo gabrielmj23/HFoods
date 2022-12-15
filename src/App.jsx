@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import { Button } from '@mui/material'
-import './App.css'
+import { AppBar, Box, Button, Container, Grid, Toolbar, Typography } from '@mui/material';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button variant='contained' onClick={() => setCount((count) => count+1)}>count is {count}</Button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AppBar position='fixed' className='mui_navbar' sx={{ bgcolor: '#defff3', fontFamily: 'Oxygen' }}>
+        <Container maxWidth='xl' spacing={4}>
+          <Toolbar disableGutters>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} textAlign={'center'}>
+              <Typography component='a' href='#productos'>
+                <Button sx={{ my: 2, color: 'black', display: 'block' }}>Productos</Button>              
+              </Typography>
+              <Typography component='a' href='#mision'>
+                <Button sx={{ my: 2, color: 'black', display: 'block' }}>Mision</Button>
+              </Typography>
+              <Typography component='a' href='#nosotros'>
+                <Button sx={{ my: 2, color: 'black', display: 'block' }}>Sobre nosotros</Button>
+              </Typography>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Grid container spacing={3} maxWidth={'100%'} mx={3}>
+        <Grid item xs={8}>
+          <h1>Come saludable y responsable, <b>sin salir de tu casa</b></h1>
+        </Grid>
+        <Grid item xs={4}>
+          <img src='' alt='Foto relativa a la marca' />
+        </Grid>
+      </Grid>
     </div>
   )
 }
 
-export default App
+export default App;
