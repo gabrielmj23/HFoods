@@ -1,0 +1,9 @@
+.appbar-link {
+  color: black;
+  display: block;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.appbar-link:hover {
+  color: #2d2d2d;
+}
