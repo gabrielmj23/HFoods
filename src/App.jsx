@@ -1,4 +1,5 @@
 import { AppBar, Box, Container, Divider, Grid, Paper, Typography } from '@mui/material';
+import QuestionForm from './QuestionForm';
 import './App.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
             </Typography>
             <Typography component='a' href='#nosotros' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
               SOBRE NOSOTROS
+            </Typography>
+            <Typography component='a' href='#preguntas' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
+              PREGUNTAS
             </Typography>
           </Box>
         </Container>
@@ -94,8 +98,28 @@ function App() {
         </Paper>
       </Box>
 
+      <Divider sx={{ padding: 4, marginLeft: '5vw', marginRight: '5vw' }} />
+
+      <Box component='form' autoComplete='off' sx={{ width: '100%', marginTop: 3 }} display='flex' alignItems='center' justifyContent='center'>
+        <Paper id='preguntas' elevation={6} sx={{ width: '50rem', bgcolor: '#a2dbc6', marginTop: 2 }}>
+          <Grid container spacing={2} alignItems='center' justifyContent='center' sx={{ padding: 4 }}>
+            <Grid item xs={8} md={5}>
+              <QuestionForm />
+            </Grid>
+            <Grid item xs={4} md={7}>
+              <Typography variant='h4' component='h4' align='center' gutterBottom sx={{ fontFamily: 'Nunito' }}>
+                Déjanos cualquier pregunta
+              </Typography>
+              <Typography variant='body2' align='center' sx={{ color: '#454747' }}>
+                Tu correo será compartido en caso de requerir contactarte
+              </Typography>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Box>
+
       <footer>
-        <Box sx={{ width: '100%', height: '3rem', marginTop: 3, bgcolor: '#d4d4d4' }} display='flex' alignItems='center' justifyContent='center'>
+        <Box sx={{ width: '100%', height: '4rem', marginTop: 3, bgcolor: '#d4d4d4' }} display='flex' alignItems='center' justifyContent='center'>
           <Typography>
             Hecho por <Typography component='a' href='https://github.com/gabrielmj23' sx={{ color: '#4e51a3' }}>Gabriel Méndez</Typography> 🦆
           </Typography>
