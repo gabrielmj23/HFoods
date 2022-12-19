@@ -93,6 +93,14 @@ function App() {
           </Grid>
         </Paper>
       </Box>
+
+      <footer>
+        <Box sx={{ width: '100%', height: '3rem', marginTop: 3, bgcolor: '#d4d4d4' }} display='flex' alignItems='center' justifyContent='center'>
+          <Typography>
+            Hecho por <Typography component='a' href='https://github.com/gabrielmj23' sx={{ color: '#4e51a3' }}>Gabriel Méndez</Typography> 🦆
+          </Typography>
+        </Box>
+      </footer>
     </div>
   )
 }
