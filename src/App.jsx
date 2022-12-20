@@ -22,7 +22,7 @@ function App() {
             </Grid>
             <Grid item container justifyContent='center' alignItems='center' xs={12} md={3}>
               <img
-                src='../public/maincard-img.png'
+                src='/maincard-img.png'
                 alt='Foto relativa a la marca'
                 width='500'
                 height='500'
