@@ -81,12 +81,7 @@ function QuestionForm() {
   const closeAction = (handler) => {
     return (
       <Fragment>
-        <IconButton
-          size='small'
-          aria-label='close'
-          color='inherit'
-          onClick={handler}
-        >
+        <IconButton size='small' aria-label='close' color='inherit' onClick={handler}>
           <Close fontSize='small' />
         </IconButton>
       </Fragment>
