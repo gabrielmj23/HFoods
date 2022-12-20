@@ -1,28 +1,11 @@
-import { AppBar, Box, Container, Divider, Grid, Paper, Typography } from '@mui/material';
+import { Box, Divider, Grid, Paper, Typography } from '@mui/material';
+import ResponsiveAppBar from './ResponsiveAppBar';
 import QuestionForm from './QuestionForm';
-import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <AppBar position='sticky' className='mui_navbar' sx={{ bgcolor: '#defff3' }}>
-        <Container maxWidth='xl' spacing={4}>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} textAlign={'center'}>
-            <Typography component='a' href='#oferta' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
-              OFERTA
-            </Typography>
-            <Typography component='a' href='#mision' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
-              MISIÓN
-            </Typography>
-            <Typography component='a' href='#nosotros' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
-              SOBRE NOSOTROS
-            </Typography>
-            <Typography component='a' href='#preguntas' className='appbar-link' sx={{ my: 3, fontFamily: 'Nunito' }}>
-              PREGUNTAS
-            </Typography>
-          </Box>
-        </Container>
-      </AppBar>
+      <ResponsiveAppBar />
       
       <Box sx={{ width: '100%', marginTop: 10 }} display='flex' alignItems='center' justifyContent='center'>
         <Paper elevation={8} sx={{ paddingBottom: 5, paddingTop: 5, width: '85rem' }}>
