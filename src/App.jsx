@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Paper, Typography } from '@mui/material';
+import { Box, Divider, Grid, Paper, Stack, Typography } from '@mui/material';
 import ResponsiveAppBar from './ResponsiveAppBar';
 import QuestionForm from './QuestionForm';
 
@@ -9,17 +9,24 @@ function App() {
       
       <Box sx={{ width: '100%', marginTop: 10 }} display='flex' alignItems='center' justifyContent='center'>
         <Paper elevation={8} sx={{ paddingBottom: 5, paddingTop: 5, width: '85rem' }}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={8}>
-              <Typography variant='h2' component='h1' align='center' className='title' sx={{ fontFamily: 'Montserrat', marginBottom: '0.5rem' }}>
-                Come saludable y responsable,
-              </Typography>
-              <Typography variant='h3' component='h2' align='center' className='subtitle' sx={{ fontFamily: 'Montserrat', fontStyle: 'italic' }}>
-                sin salir de tu casa
-              </Typography>
+          <Grid container sx={{ height: '100%' }} spacing={1}>
+            <Grid item container justifyContent='center' alignItems='center' xs={12} md={8}>
+              <Stack spacing={0}>
+                <Typography variant='h2' component='h1' align='center' className='title' sx={{ fontFamily: 'Montserrat', marginBottom: '0.5rem' }}>
+                  Come saludable y responsable,
+                </Typography>
+                <Typography variant='h3' component='h2' align='center' className='subtitle' sx={{ fontFamily: 'Montserrat', fontStyle: 'italic' }}>
+                  sin salir de tu casa
+                </Typography>
+              </Stack>
             </Grid>
-            <Grid item xs={8} md={4}>
-              <img src='' alt='Foto relativa a la marca' />
+            <Grid item container justifyContent='center' alignItems='center' xs={12} md={3}>
+              <img
+                src='../public/maincard-img.png'
+                alt='Foto relativa a la marca'
+                width='500'
+                height='500'
+              />
             </Grid>
           </Grid>
         </Paper>
