@@ -100,7 +100,7 @@ function App() {
 
       <Divider sx={{ padding: 4, marginLeft: '5vw', marginRight: '5vw' }} />
 
-      <Box component='form' autoComplete='off' sx={{ width: '100%', marginTop: 3 }} display='flex' alignItems='center' justifyContent='center'>
+      <Box sx={{ width: '100%', marginTop: 3 }} display='flex' alignItems='center' justifyContent='center'>
         <Paper id='preguntas' elevation={6} sx={{ width: '50rem', bgcolor: '#a2dbc6', marginTop: 2 }}>
           <Grid container spacing={2} alignItems='center' justifyContent='center' sx={{ padding: 4 }}>
             <Grid item xs={8} md={5}>
@@ -108,7 +108,7 @@ function App() {
             </Grid>
             <Grid item xs={4} md={7}>
               <Typography variant='h4' component='h4' align='center' gutterBottom sx={{ fontFamily: 'Nunito' }}>
-                Déjanos cualquier pregunta
+                Déjanos cualquier pregunta o comentario
               </Typography>
               <Typography variant='body2' align='center' sx={{ color: '#454747' }}>
                 Tu correo será compartido en caso de requerir contactarte
